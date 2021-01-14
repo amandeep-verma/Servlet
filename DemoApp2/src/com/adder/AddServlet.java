@@ -2,6 +2,7 @@ package com.adder;
 
 /* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and returns 
  * the output to the webpage using HttpServletResponse.
+ * Program shows the use of doPost and doGet method
  */
 import java.io.IOException;
 import java.io.PrintWriter;

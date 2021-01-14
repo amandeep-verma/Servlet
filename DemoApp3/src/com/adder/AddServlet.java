@@ -1,7 +1,8 @@
 package com.adder;
 
-/* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and returns 
- * the output to the webpage using HttpServletResponse.
+/* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and make the sum of those 2 number
+ * and send it to another servlet using RequestDispatcher object. Using req.getRequestDispatcher("sq") , we get the RequestDispatcher
+ * object of the SqServlet and from there we forward request and response using forward method.
  */
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,9 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
 
-	// service method belongs to servlet life cycle
-	// tomcat creates the object of HttpServletRequest and HttpServletResponse
-	// service method works with both get and post request
+	// HttpServletRequest and HttpServletResponse  are both interface, Tomcat does the implementation and returns its object to us, 
+	// so we can use them.
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
 		// req.getParameter("num1") returns string here so we use method to change it to integer

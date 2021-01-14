@@ -1,6 +1,6 @@
 package com.adder;
 
-// calling a servlet from present servlet
+// Servlet AddServlet calls SqServlet
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,13 +21,7 @@ public class SqServlet extends HttpServlet{
 		
 		// getWriter() returns an object of PrintWriter
 		PrintWriter out = resp.getWriter();
-		out.println("From SqServlet(calling servlet from servlet), the square of the sum of the given two number is "+k );
-		
-		
-		// To call a servlet from this servlet class, we have two methods
-		// Req Dispatcher and Redirect
-		
-		
+		out.println("From SqServlet(calling servlet from servlet) using RequestDispatcher, the square of the sum of the given two number is \n"+k );
 		
 	}
 }
