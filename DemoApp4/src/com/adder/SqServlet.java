@@ -20,7 +20,7 @@ public class SqServlet extends HttpServlet{
 		
 		// getWriter() returns an object of PrintWriter
 		PrintWriter out = resp.getWriter();
-		out.println("From SqServlet(calling servlet from servlet) using SendRedirect, the square of the sum of the given two number is \n"+k );
+		out.println("From SqServlet(calling servlet from servlet) using SendRedirect(Url- Rewriting), the square of the sum of the given two number is \n"+k );
 		
 	}
 }

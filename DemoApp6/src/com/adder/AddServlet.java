@@ -1,17 +1,18 @@
 package com.adder;
 
 /* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and make the sum of those 2 number
- * and send it to another servlet using SendRedirect(Url ReWriting). Here we Rewrite the url and send it to the browser. Browser calls the SqServlet
- * by passing the k value from url which we rewrote.
+ * and send it to another servlet using SendRedirect(Cookies).
  */
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 
@@ -28,10 +29,15 @@ public class AddServlet extends HttpServlet {
 		 * 1. Session  2. Cookies  3. Url ReWriting
 		*/
 		
-		// Here we are using Url Rewriting
-		// here we are sending k as in it would get sent in doGet request to browser which calls for another servlet.
-		resp.sendRedirect("sq?k="+k);
+		// Here we are using Cookies
+		// Cookie constructor takes 2 object name and value. Both are String types, so we convert int k to string.
+		Cookie cookie = new Cookie("k", k+"");
 		
+		// resp.addCookie takes cookie parameter and sends it to the client. Client from there takes this cookie.
+		resp.addCookie(cookie);
+		
+		// Client sends the req to SqServlet with the cookie
+		resp.sendRedirect("sq");
 	}
 	
 

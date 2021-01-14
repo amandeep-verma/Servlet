@@ -1,8 +1,7 @@
 package com.adder;
 
 /* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and make the sum of those 2 number
- * and send it to another servlet using SendRedirect(Url ReWriting). Here we Rewrite the url and send it to the browser. Browser calls the SqServlet
- * by passing the k value from url which we rewrote.
+ * and send it to another servlet using SendRedirect(Session).
  */
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 
@@ -28,9 +28,17 @@ public class AddServlet extends HttpServlet {
 		 * 1. Session  2. Cookies  3. Url ReWriting
 		*/
 		
-		// Here we are using Url Rewriting
-		// here we are sending k as in it would get sent in doGet request to browser which calls for another servlet.
-		resp.sendRedirect("sq?k="+k);
+		// Here we are using Session 
+		// To maintain the data throughout session we can use session. We can send request to multiple servlets by this.
+		// We get object HttpSession interface by req.getSession() to get hold on it.
+		HttpSession session = req.getSession();
+		
+		// setting the attributes. The session stays as long as we close it.
+		session.setAttribute("k", k);
+		
+		// resp.sendRedirect takes the parameter of url to map from xml. 
+		resp.sendRedirect("sq");
+		
 		
 	}
 	
