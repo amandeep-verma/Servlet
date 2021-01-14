@@ -12,9 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
 
-	// service method belongs to servlet life cycle
-	// tomcat creates the object of HttpServletRequest and HttpServletResponse
-	// service method works with both get and post request
+	// request from user always goes to service first, depend on the request made it calls doGet or doPost.
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		int i = Integer.parseInt(req.getParameter("num1"));
