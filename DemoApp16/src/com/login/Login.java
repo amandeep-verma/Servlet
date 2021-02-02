@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
 		String password = request.getParameter("password");
 
 		if (uname.equals("amandeep") && password.equals("learning")) {
-			// Setting attribute usernam
+			// Setting attribute username
 			HttpSession session = request.getSession();
 			session.setAttribute("username", uname);
 			response.sendRedirect("welcome.jsp");

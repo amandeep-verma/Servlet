@@ -7,7 +7,7 @@ Anything inside < % % > (Scriplet Tag) will get pasted into service method.
 Anthing(method or variable) inside < %! %> (Declaration tag) will get pasted in class outside of service method.
 Things inside < %@page import= "package name" %> (Directive tag) will be used to import packages.
 Things inside < %=k %> (Expression tag) will taken as out.println(k); ,  out.println(a) equivalent to < !=a ! >
-Remember in html file we have to chenge action inside the form tag to jsp.
+Remember in html file we have to change action inside the form tag to jsp.
 -->
 
 <!-- DIRECTIVE TAG -->

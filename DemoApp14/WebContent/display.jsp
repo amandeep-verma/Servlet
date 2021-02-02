@@ -18,8 +18,7 @@
  	String : ${str}<br>
 	Length : ${fn:length(str)} <br> 
 	
-	
-	
+
 	<!-- Splitting the string on space character and printing them back -->
 	<c:forEach items="${fn:split(str,' ')}" var="s">
 		${s} <br>

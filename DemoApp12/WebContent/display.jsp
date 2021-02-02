@@ -12,7 +12,7 @@
 <body>
 
 
-	<!--Expression Language (EL) -->
+	<!--Expression Language (EL)- We use similar structure in JSTL for output-->
 	${label} <br>
 	
 	<c:out value="${label}" /> <br>

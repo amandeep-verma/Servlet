@@ -3,6 +3,7 @@ package com.adder;
 /* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and make the sum of those 2 number
  * and send it to another servlet using RequestDispatcher object. Using req.getRequestDispatcher("sq") , we get the RequestDispatcher
  * object of the SqServlet and from there we forward request and response using forward method.
+ * REQUEST DISPATCHER INTERFACE ALLOWS YOU TO SEND THE REQUEST TO ANOTHER RESOURCE WITHIN SAME SERVER
  */
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -32,6 +33,4 @@ public class AddServlet extends HttpServlet {
 		// forward() forwards the req and resp to the rd object(In our case another servlet)
 		rd.forward(req, resp);
 	}
-	
-
 }

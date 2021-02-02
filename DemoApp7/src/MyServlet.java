@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /* ServletConfig & ServletContext - both can be be used to specify the initial values in XML which can be used in servlet programs. 
  * ServletContext is an object which will be shared by all the servlets. 
  * For different configuration for each servlets, we would use ServletConfig.
- * That means if we have 5 servlets, we ll have 5 ServletConfig and just 1 ServletContext for them.
+ * That means if we have 5 servlets, we will have 5 ServletConfig and just 1 ServletContext for them.
  * They can be used for storing information like root login, password for databases and others.
 */
 public class MyServlet extends HttpServlet{
@@ -18,7 +18,6 @@ public class MyServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		PrintWriter out = resp.getWriter();
-		
 		
 		// We are creating object of ServletContext
 		// ServletContext is an interface.
@@ -31,7 +30,7 @@ public class MyServlet extends HttpServlet{
 		String str2 = ctx.getInitParameter("phone");
 		out.println("hii! "+ str +" you have been using "+ str2 );
 		
-		
+		// We are creating object of ServletConfig which is interface.
 		ServletConfig cfg = getServletConfig();
 		String str3 = cfg.getInitParameter("name");
 		out.println("Using ServletConfig the name is "+ str3);

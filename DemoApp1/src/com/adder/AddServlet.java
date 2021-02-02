@@ -25,5 +25,6 @@ public class AddServlet extends HttpServlet {
 		// getWriter() returns an object of PrintWriter
 		PrintWriter out = resp.getWriter();
 		out.println("the sum is " + k);
+		
 	}
 }

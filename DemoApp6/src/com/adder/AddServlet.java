@@ -39,6 +39,4 @@ public class AddServlet extends HttpServlet {
 		// Client sends the req to SqServlet with the cookie
 		resp.sendRedirect("sq");
 	}
-	
-
 }

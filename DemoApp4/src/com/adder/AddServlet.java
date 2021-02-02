@@ -3,6 +3,7 @@ package com.adder;
 /* simple servlet program which takes 2 numbers from user from webpage using HttpServletRequest and make the sum of those 2 number
  * and send it to another servlet using SendRedirect(Url ReWriting). Here we Rewrite the url and send it to the browser. Browser calls the SqServlet
  * by passing the k value from url which we rewrote.
+ * SENDREDIRECT ALLOWS YOU TO TRANSFER THE REQUEST TO ANOTHER RESOURCE TO DIFFERENT DOMAIN BY SENDING THE REQUEST TO CLIENT OR BROWSER
  */
 import java.io.IOException;
 import java.io.PrintWriter;

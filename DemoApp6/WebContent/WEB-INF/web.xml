@@ -17,7 +17,7 @@
 	</servlet-mapping>
 	
 	
-		<servlet>
+	<servlet>
 		<servlet-name>squaring</servlet-name>
 		<servlet-class>com.adder.SqServlet</servlet-class>
 	</servlet>
