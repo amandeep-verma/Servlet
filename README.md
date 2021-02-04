@@ -16,6 +16,7 @@ DemoApp13 - JDBC Connection and SQL Tags in JSTL
 DemoApp14 - JSTL Function Tags  
 DemoApp15 - Servlet Filter  
 DemoApp16 - Login Using Servlet and JSP  
-DemoApp17 - Login Using Servlet, JSP and JDBC
+DemoApp17 - Login Using Servlet, JSP and JDBC  
+DemoApp18 - ServletJSPJDBCMavenDemo
 
 Java DataBase Connectivity - JDBC connection helper
